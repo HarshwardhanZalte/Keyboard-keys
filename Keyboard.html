@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyBoard Keys</title>
+    <style>
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          div {
+            text-align: center;
+          }
+
+        td,
+        th {
+            border: 1px solid white;
+            width: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="background-color: #212121; color: white; font-size: 24px;">
+    <div>
+        <h1>Keyboard Keys</h1>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Keycode</th>
+                <th>Code</th>
+            </tr>
+            <tr>
+                <td id="key"></td>
+                <td id="keycode"></td>
+                <td id="code"></td>
+            </tr>
+        </table>
+        <p></p>
+    </div>
+</body>
+<script>
+    window.addEventListener('keydown', function (e) {
+        document.getElementById('key').innerHTML = e.key;
+        document.getElementById('keycode').innerHTML = e.keyCode;
+        document.getElementById('code').innerHTML = e.code;
+        document.querySelector('p').innerHTML = `You Pressed "${e.key}"`
+    })
+</script>
+<!--HarshwardhanZalte-->
+</html>
