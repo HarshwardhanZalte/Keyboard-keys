@@ -22,6 +22,17 @@
             width: 150px;
             text-align: center;
         }
+
+        input {
+            background-color: #313131;
+            height: 30px;
+            width: 300px;
+            color: white;
+            font-size: 21px;
+            border-radius: 16px;
+            border: none;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -35,12 +46,12 @@
                 <th>Code</th>
             </tr>
             <tr>
-                <td id="key"></td>
-                <td id="keycode"></td>
-                <td id="code"></td>
+                <td id="key">_</td>
+                <td id="keycode">_</td>
+                <td id="code">_</td>
             </tr>
         </table>
-        <p></p>
+        <input type="text" disabled>
     </div>
 </body>
 <script>
@@ -48,7 +59,7 @@
         document.getElementById('key').innerHTML = e.key;
         document.getElementById('keycode').innerHTML = e.keyCode;
         document.getElementById('code').innerHTML = e.code;
-        document.querySelector('p').innerHTML = `You Pressed "${e.key}"`
+        document.querySelector('input').value = `You Pressed "${e.key}"`
     })
 </script>
 <!--HarshwardhanZalte-->
